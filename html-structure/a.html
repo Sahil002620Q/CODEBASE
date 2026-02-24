@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil | System Architect</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00d2ff;
+            --neon-purple: #9d00ff;
+            --neon-green: #39ff14;
+            --neon-red: #ff3131;
+            --bg-dark: #020202;
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            margin: 0; background: var(--bg-dark); color: #fff;
+            font-family: 'Consolas', monospace; overflow-x: hidden;
+        }
+
+        /* --- BACKGROUND EFFECTS --- */
+        .parallax-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #020202 100%);
+            z-index: -2;
+        }
+        .grid-lines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px; z-index: -1;
+        }
+
+        section { padding: 120px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+        /* --- UI COMPONENTS --- */
+        .glitch-text {
+            font-size: clamp(3rem, 12vw, 7rem); font-weight: 900;
+            text-transform: uppercase; color: #fff;
+            text-shadow: 3px 0 var(--neon-red), -3px 0 var(--neon-blue);
+            letter-spacing: 5px;
+        }
+
+        .mega-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px; /* Deep Edge Curve */
+            padding: 50px;
+            margin: 30px 0;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            backdrop-filter: blur(20px);
+            position: relative;
+        }
+
+        .mega-box:hover {
+            transform: translateY(-25px) scale(1.03);
+            border-color: var(--neon-purple);
+            box-shadow: 0 40px 80px rgba(157, 0, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- PROGRESS BARS --- */
+        .skill-bar-container { margin: 20px 0; width: 100%; }
+        .bar-bg { background: rgba(255,255,255,0.1); height: 10px; border-radius: 10px; overflow: hidden; }
+        .bar-fill { height: 100%; background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple)); width: 0; transition: 2s ease-out; }
+
+        /* --- NAVBAR --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 25px 10%;
+            display: flex; justify-content: space-between; z-index: 1000;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,210,255,0.2);
+        }
+        nav a { color: var(--neon-blue); text-decoration: none; margin-left: 25px; font-size: 0.8rem; letter-spacing: 2px; }
+
+        .terminal-block {
+            background: #000; border-radius: 15px; padding: 20px;
+            border: 1px solid var(--neon-green); color: var(--neon-green);
+            font-family: 'Courier New', monospace; font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax-bg"></div>
+    <div class="grid-lines"></div>
+
+    <nav>
+        <div style="font-weight: bold; color: #fff;">SAHIL_OS [v2.0.26]</div>
+        <div>
+            <a href="#hero">// HOME</a>
+            <a href="#about">// INTEL</a>
+            <a href="#skills">// CORES</a>
+            <a href="#roadmap">// PATH</a>
+            <a href="#logs">// LOGS</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <h1 class="glitch-text" data-aos="fade-down">SAHIL</h1>
+        <p style="color: var(--neon-blue); font-size: 1.5rem;" data-aos="fade-right">CSE AI-ML SPECIALIST & LINUX ENTHUSIAST</p>
+        <div class="terminal-block" data-aos="zoom-in" data-aos-delay="400">
+            $ whoami <br>
+            > Sahil: 19-year-old developer based in Jalandhar. <br>
+            > Skills: Python, C, Networking, Cyber-Sec. <br>
+            > Status: Currently upgrading neural frameworks...
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 style="color: var(--neon-purple);" data-aos="fade-right">01_CORE_COMPETENCIES</h2>
+        <div class="mega-box" data-aos="fade-up">
+            <div class="skill-bar-container">
+                <p>Python Development (ML Focus)</p>
+                <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <p>Low-Level Programming (C)</p>
+                <div class="bar-bg"><div class="bar-fill" style="width: 70%;"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <p>Linux System Administration</p>
+                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-bar-container">
+                <p>Network Security & Pentesting</p>
+                <div class="bar-bg"><div class="bar-fill" style="width: 65%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="labs">
+        <h2 style="color: var(--neon-blue);" data-aos="fade-left">02_RESEARCH_LABS</h2>
+        <div class="bento-grid">
+            <div class="mega-box" data-aos="flip-up">
+                <h3>Vibe-Host v4</h3>
+                <p>A fast-deployment web engine optimized for HTML5/CSS3 animations and 3D interactions.</p>
+            </div>
+            <div class="mega-box" data-aos="flip-up" data-aos-delay="200">
+                <h3>Deep-Scan AI</h3>
+                <p>Exploring Python scripts for automated vulnerability detection in local area networks.</p>
+            </div>
+            <div class="mega-box" data-aos="flip-up" data-aos-delay="400">
+                <h3>Kernel-Maniac</h3>
+                <p>Customizing WSL and Zorin OS environments for maximum developer productivity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <h2 style="color: var(--neon-green);" data-aos="zoom-in">03_LEARNING_PATHWAY</h2>
+        <div class="mega-box" style="border-left: 5px solid var(--neon-green);">
+            <p><strong>PHASE 1:</strong> Mastery of C Data Structures & Algorithms (Current)</p>
+            <p><strong>PHASE 2:</strong> Deep Learning with TensorFlow & PyTorch (Q3 2026)</p>
+            <p><strong>PHASE 3:</strong> Advanced Ethical Hacking Certifications (2027)</p>
+        </div>
+    </section>
+
+    <section id="logs">
+        <h2 style="color: var(--neon-red);" data-aos="fade-down">04_SYSTEM_LOGS</h2>
+        <div class="bento-grid">
+            <div class="mega-box" data-aos="fade-right">
+                <p class="accent">[Feb 2026] - Deployed new 3D UI Portfolio.</p>
+                <p class="accent">[Jan 2026] - Completed Network Architecture basics.</p>
+                <p class="accent">[Dec 2025] - Optimized Python automation scripts.</p>
+            </div>
+            <div class="mega-box" data-aos="fade-left">
+                <h3>Hardware Stats</h3>
+                <p>OS: Kali Linux / Windows WSL</p>
+                <p>Kernel: 5.15.0-generic</p>
+                <p>Status: All Systems Operational</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 50px; text-align: center; color: #444; border-top: 1px solid #111;">
+        &copy; 2026 SAHIL // CSE AI-ML // ENCRYPTED_CONNECTION
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, mirror: true });
+
+        // Simple animation to fill progress bars on scroll
+        window.addEventListener('scroll', () => {
+            const bars = document.querySelectorAll('.bar-fill');
+            bars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if(rect.top < window.innerHeight) {
+                    bar.style.width = bar.getAttribute('style').split(':')[1];
+                }
+            });
+        });
+    </script>
+</body>
+</html>

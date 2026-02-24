@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil | 3D Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #1a1a2e, #16213e, #0f3460); /* Deep space blue */
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        /* The 3D Container */
+        .card {
+            position: relative;
+            width: 400px;
+            height: 550px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            transform-style: preserve-3d; /* This enables the 3D depth */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            color: white;
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+        }
+
+        /* 3D "Pop out" elements */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            background: #00d2ff; /* Placeholder for your photo */
+            border-radius: 50%;
+            transform: translateZ(50px); /* Pushes this 50px forward in 3D space */
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        h2 { transform: translateZ(40px); margin: 10px 0; color: #00d2ff; }
+        p { transform: translateZ(30px); text-align: center; color: #ccc; }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            transform: translateZ(20px);
+        }
+
+        .tag {
+            background: rgba(0, 210, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid #00d2ff;
+        }
+
+        .btn {
+            margin-top: auto;
+            padding: 12px 30px;
+            background: #00d2ff;
+            color: #0f3460;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transform: translateZ(40px);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.5">
+        <div class="profile-img"></div>
+        <h2>Sahil</h2>
+        <p>CSE AI & ML Student | 1st Year</p>
+        <p style="font-size: 14px;">Building sites with VibeCoding. Exploring Linux, C, Python & Cybersecurity.</p>
+        
+        <div class="tags">
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Python</span>
+            <span class="tag">C Programming</span>
+            <span class="tag">Networking</span>
+        </div>
+
+        <a href="#" class="btn">View My Projects</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</body>
+</html>

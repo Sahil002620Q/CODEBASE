@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAHIL | System Overlord</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --neon-cyan: #00f2ff;
+            --neon-pink: #ff007f;
+            --neon-yellow: #f3ff00;
+            --dark-core: #010101;
+            --glass-white: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; cursor: crosshair; }
+        body {
+            margin: 0; background: var(--dark-core); color: #fff;
+            font-family: 'Segoe UI', sans-serif; overflow-x: hidden;
+        }
+
+        /* Moving Grid Background */
+        .cyber-grid {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px; z-index: -1;
+            animation: moveGrid 20s linear infinite;
+        }
+        @keyframes moveGrid { from { transform: translateY(0); } to { transform: translateY(60px); } }
+
+        section { padding: 150px 12%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+        /* --- THE BOXES (MAGNETIC RADIUS) --- */
+        .bento-box {
+            background: var(--glass-white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px; /* High Edge Curve */
+            padding: 50px;
+            margin: 25px 0;
+            backdrop-filter: blur(25px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .bento-box:hover {
+            transform: translateY(-30px) scale(1.02) rotateZ(1deg); /* Raised & Tilted */
+            border-color: var(--neon-cyan);
+            box-shadow: 0 50px 100px rgba(0, 242, 255, 0.15);
+        }
+
+        .neon-glow { text-shadow: 0 0 10px var(--neon-cyan); color: var(--neon-cyan); }
+
+        /* Grid for Random Content */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 25px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; background: rgba(0,0,0,0.9); border-bottom: 2px solid var(--neon-cyan);
+        }
+        .nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 0.8rem; }
+
+        /* Progress Bar */
+        .progress-line {
+            height: 4px; background: var(--neon-cyan); width: 0%; position: fixed; top: 0; left: 0; z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-line" id="scrollBar"></div>
+    <div class="cyber-grid"></div>
+
+    <nav>
+        <div class="neon-glow" style="font-size: 1.5rem; font-weight: 900;">SAHIL_OS_PRO</div>
+        <div class="nav-links">
+            <a href="#kernel">/KERNEL</a>
+            <a href="#network">/NETWORK</a>
+            <a href="#code">/CODE</a>
+            <a href="#threats">/THREAT_LOGS</a>
+        </div>
+    </nav>
+
+    <section>
+        <h1 style="font-size: 6rem; margin: 0;" data-aos="zoom-in">SAHIL</h1>
+        <p class="neon-glow" data-aos="fade-right">CSE AI-ML | B.TECH 1ST YEAR | JALANDHAR</p>
+        <div class="bento-box" data-aos="fade-up">
+            <h3>$ sudo systemctl status sahil</h3>
+            <p>> 19 years old. Specialized in building 3D interactive shells.</p>
+            <p>> Obsessed with Zorin OS customization and Kali Linux networking.</p>
+        </div>
+    </section>
+
+    <section id="kernel">
+        <h2 class="neon-glow" data-aos="fade-left">01_LINUX_KERNEL_DISTRO</h2>
+        <div class="content-grid">
+            <div class="bento-box" data-aos="flip-up">
+                <h4>ZORIN OS</h4>
+                <p>Primary work environment. Optimized for sleek UI and WSL 2 bridge integration.</p>
+            </div>
+            <div class="bento-box" data-aos="flip-up" data-aos-delay="200">
+                <h4>KALI / PARROT</h4>
+                <p>Environment for network auditing and penetration testing simulations.</p>
+            </div>
+            <div class="bento-box" data-aos="flip-up" data-aos-delay="400">
+                <h4>WSL ARCHITECTURE</h4>
+                <p>Running high-performance Linux binaries inside Windows for hybrid development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="network">
+        <h2 class="neon-glow" data-aos="zoom-out">02_NETWORKING_LAYER</h2>
+        <div class="bento-box" data-aos="fade-up">
+            <h3>Protocol Knowledge</h3>
+            <p>Mastering TCP/IP, DNS, and HTTP/S. Analyzing packet data using Wireshark to understand how data moves across the globe.</p>
+            <div style="background: #000; padding: 15px; border-radius: 10px; font-family: monospace; color: #39ff14;">
+                [SCANNING IP: 192.168.1.1]... <br>
+                [PORT 80: OPEN]... <br>
+                [PORT 443: OPEN]... <br>
+                [CONNECTION: SECURE]
+            </div>
+        </div>
+    </section>
+
+    <section id="code">
+        <h2 style="color: var(--neon-pink);" data-aos="fade-right">03_CODE_LABORATORY</h2>
+        <div class="content-grid">
+            <div class="bento-box" data-aos="zoom-in">
+                <h4 style="color: var(--neon-pink);">PYTHON AI/ML</h4>
+                <p>Writing scripts to automate data collection. Learning Numpy and Pandas for future neural network training.</p>
+            </div>
+            <div class="bento-box" data-aos="zoom-in" data-aos-delay="200">
+                <h4 style="color: var(--neon-pink);">HTML/CSS/JS</h4>
+                <p>Creating glassmorphism layouts and complex 3D CSS animations for high-end web experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="threats">
+        <h2 style="color: var(--neon-yellow);" data-aos="fade-down">04_CYBER_INTEL</h2>
+        <div class="bento-box" data-aos="fade-up" style="border-color: var(--neon-yellow);">
+            <p><strong>THREAT LEVEL:</strong> MINIMAL</p>
+            <p>Currently researching Brute Force prevention and SQL injection mitigation in local Python-based backend systems.</p>
+            <p><strong>TOOLS:</strong> Metasploit, Nmap, Burp Suite, Python-Requests.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="neon-glow" data-aos="fade-right">05_SYSTEM_DUMP</h2>
+        <div class="content-grid">
+            <div class="bento-box" data-aos="fade-right">
+                <p><strong>Memory:</strong> DDR4 16GB</p>
+                <p><strong>IDE:</strong> VS Code / Vim</p>
+                <p><strong>Coffee Consumption:</strong> High</p>
+            </div>
+            <div class="bento-box" data-aos="fade-left">
+                <p><strong>Current Project:</strong> 3D Portfolio v2.0</p>
+                <p><strong>Learning:</strong> Bragg's Law in Physics</p>
+                <p><strong>Hobby:</strong> Customizing Zsh themes</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 100px; text-align: center; border-top: 1px solid #222; background: #000;">
+        <p class="neon-glow">CONNECTION TERMINATED // SAHIL 2026</p>
+    </footer >
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, mirror: true });
+
+        // Scroll progress bar
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollBar").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>

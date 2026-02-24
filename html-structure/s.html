@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil | CSE AI-ML Architect</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00d2ff;
+            --neon-purple: #9d00ff;
+            --neon-green: #39ff14;
+            --bg-dark: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; background: var(--bg-dark); color: #fff;
+            font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth;
+        }
+
+        /* Animated Grid Background */
+        .background-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--bg-dark)),
+                        url('https://www.transparenttextures.com/patterns/stardust.png');
+            z-index: -1; opacity: 0.4;
+        }
+
+        section { padding: 100px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+        /* --- TYPOGRAPHY --- */
+        .glitch { font-size: 5rem; font-weight: 800; text-transform: uppercase; position: relative; text-shadow: 0 0 15px var(--neon-blue); }
+        .accent { color: var(--neon-blue); font-family: monospace; }
+
+        /* --- THE UPGRADED INTERACTIVE BOXES --- */
+        .mega-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            margin: 20px 0;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+        }
+
+        /* The Special Animation: Lift + Glow + Border */
+        .mega-card:hover {
+            transform: translateY(-20px) scale(1.02) rotateX(5deg); /* Lifts and Tilts */
+            box-shadow: 0 30px 60px rgba(0, 210, 255, 0.3);
+            border-color: var(--neon-blue);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .mega-card h3 { font-size: 1.8rem; margin-top: 0; color: var(--neon-blue); }
+
+        /* --- GRID LAYOUTS --- */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-tag {
+            display: inline-block; padding: 8px 15px; border-radius: 50px;
+            background: rgba(157, 0, 255, 0.1); border: 1px solid var(--neon-purple);
+            margin: 5px; font-size: 0.8rem; transition: 0.3s;
+        }
+        .skill-tag:hover { background: var(--neon-purple); color: white; transform: scale(1.1); }
+
+        /* --- NAVIGATION --- */
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 10%; display: flex; justify-content: space-between; z-index: 1000; background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); }
+        nav a { color: #fff; text-decoration: none; font-size: 0.9rem; margin-left: 20px; font-family: monospace; }
+        nav a:hover { color: var(--neon-blue); }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <nav>
+        <div class="accent">SAHIL.SYS</div>
+        <div>
+            <a href="#about">_ABOUT</a>
+            <a href="#skills">_SKILLS</a>
+            <a href="#projects">_LABS</a>
+            <a href="#contact">_CONNECT</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <h1 class="glitch" data-aos="zoom-out-up">SAHIL</h1>
+        <p class="accent" data-aos="fade-right" data-aos-delay="500">>> INITIALIZING CSE AI-ML ENVIRONMENT...</p>
+        <p style="max-width: 600px; line-height: 1.8; color: #aaa;" data-aos="fade-up" data-aos-delay="700">
+            A 19-year-old developer based in Jalandhar, specializing in automated systems, network security, and AI model integration. Currently exploring the depths of the Linux kernel and Python-based ML frameworks.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="accent" data-aos="fade-down">01. TECH_STACK</h2>
+        <div class="mega-card" data-aos="fade-up">
+            <h3>Programming Languages</h3>
+            <div class="skill-tag">Python (Advanced)</div>
+            <div class="skill-tag">C Language (System Level)</div>
+            <div class="skill-tag">HTML5/CSS3</div>
+            <div class="skill-tag">Bash Scripting</div>
+        </div>
+        <div class="mega-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Operating Systems & Tools</h3>
+            <div class="skill-tag">Kali Linux</div>
+            <div class="skill-tag">Zorin OS</div>
+            <div class="skill-tag">WSL 2</div>
+            <div class="skill-tag">Git/GitHub</div>
+            <div class="skill-tag">VibeCoding Workflow</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="accent" data-aos="fade-down">02. CYBER_LABS</h2>
+        <div class="bento-grid">
+            <div class="mega-card" data-aos="flip-left">
+                <h3>Network Sentinel</h3>
+                <p>An automated network scanning tool built in Python to map active nodes and identify open ports in local environments.</p>
+                <span class="accent">Status: Deployed</span>
+            </div>
+            <div class="mega-card" data-aos="flip-right" data-aos-delay="200">
+                <h3>Neural Sandbox</h3>
+                <p>Experimenting with AI/ML datasets to create predictive models for system resource management.</p>
+                <span class="accent">Status: Research</span>
+            </div>
+            <div class="mega-card" data-aos="flip-left" data-aos-delay="400">
+                <h3>UI/UX Experiments</h3>
+                <p>Multiple responsive websites built using VibeCoding techniques, focusing on glassmorphism and 3D interactions.</p>
+                <span class="accent">Status: Active</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="mega-card" style="text-align: center; border-color: var(--neon-purple);" data-aos="zoom-in">
+            <h2 class="neon-purple">SYSTEM_REPORT</h2>
+            <div style="display: flex; justify-content: space-around; margin-top: 30px; flex-wrap: wrap;">
+                <div>
+                    <h4 class="accent">LOCATION</h4>
+                    <p>Jalandhar, India</p>
+                </div>
+                <div>
+                    <h4 class="accent">ACADEMIC</h4>
+                    <p>1st Year CSE (AI/ML)</p>
+                </div>
+                <div>
+                    <h4 class="accent">UPTIME</h4>
+                    <p>2026_VERSION_1.0</p>
+                </div>
+            </div>
+            <button style="margin-top: 30px; padding: 15px 40px; background: none; border: 1px solid var(--neon-blue); color: #fff; border-radius: 50px; cursor: pointer;">
+                ESTABLISH_CONNECTION
+            </button>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, mirror: true });
+        
+        // Console Greeting
+        console.log("%c SAHIL_OS LOADED ", "background: #00d2ff; color: #000; font-weight: bold;");
+    </script>
+</body>
+</html>
