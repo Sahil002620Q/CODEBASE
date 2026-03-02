@@ -6,3 +6,4 @@ for line in list:
     print(ch,end='',flush=True)
           time.sleep(0.1)
   print()
+# code for lien animation 
