@@ -2,4 +2,6 @@ print('\nhello')
 int x = 9:
 if (x > 3)
     print('hii')
-#daily commit done
+import os
+os.stream('ls')
+#daily commit for strength 
