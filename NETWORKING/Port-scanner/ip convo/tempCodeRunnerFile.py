@@ -35,3 +35,5 @@ thread.start()
 while True:
     message = input("You: ")
     conn.send(message.encode())
+
+#either remove or rename
