@@ -1,12 +1,32 @@
 p{
-    color:aqua;
+    color:rgb(19, 26, 26);
     background-color:antiquewhite;
     border: 4px;
 }
 body{
-    background-image: url();
+    background-image: url(https://imgs.search.brave.com/CPvxDSO8tLXCZADu_YdAVCU_Hy2wKzypytAAP201tH8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDAv/ODYzLzUwOS9zbWFs/bC9kYXJrLWFic3Ry/YWN0LWdlb21ldHJp/Yy10ZWNobm9sb2d5/LWJhY2tncm91bmQt/d2l0aC1hLXJlcGVh/dGluZy1taW5pbWFs/aXN0LXBhdHRlcm4t/b2YtYmx1ZS1zcXVh/cmUtc2hhcGVzLWFu/ZC1kYXNoZWQtbGlu/ZXMtZnVsbC1oZC1h/bmQtbG9vcGluZy10/ZXh0dXJlZC10ZWNo/LWJhY2tncm91bmQt/ZnJlZS12aWRlby5q/cGc);
     border: 33px;
 }
 div{
     background-color: beige;
+}
+.msg{
+    background-color: black;
+    color: beige;
+}
+.int-box{
+    height: 134px; 
+    width: 295px; 
+    background-color: rgb(19, 34, 34); 
+    align-items: center;
+    margin-left: -40px;
+}
+.o-box{
+    height: 234px; 
+    width: 225px; 
+    background-color: rgb(24, 30, 30,0.9); 
+    padding: 94px;
+    margin-left: 344px;
+    background-image: url();
+    border-radius: 44px;
 }
