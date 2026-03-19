@@ -1,0 +1,54 @@
+{
+    "sourceFile": "js-dcl.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1773936002192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1773936007556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n let x = 6;\r\n-ole\n\\ No newline at end of file\n+console.\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936029795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n let x = 6;\r\n-console.\n\\ No newline at end of file\n+\r\n+console.log(x)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936037148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n let x = 6;\r\n-\r\n+let y = 7\r\n console.log(x)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936042262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n let x = 6;\r\n-let y = 7\r\n+let y = 7;\r\n+x +\r\n console.log(x)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936048114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n let x = 6;\r\n let y = 7;\r\n-x +\r\n+x + y = caches;\r\n console.log(x)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936055352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n let x = 6;\r\n let y = 7;\r\n-x + y = caches;\r\n+x + y = s;\r\n console.log(x)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936061110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n let x = 6;\r\n let y = 7;\r\n x + y = s;\r\n-console.log(x)\n\\ No newline at end of file\n+console.log(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936067539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n let x = 6;\r\n let y = 7;\r\n-x + y = s;\r\n+c =x + y = s;\r\n console.log(s)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1773936076741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n let x = 6;\r\n let y = 7;\r\n-c =x + y = s;\r\n-console.log(s)\n\\ No newline at end of file\n+c =x + y;\r\n+console.log(c)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1773936002192,
+            "name": "Commit-0",
+            "content": "let x = 6;\r\nole"
+        }
+    ]
+}

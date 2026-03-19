@@ -1,0 +1,22 @@
+{
+    "sourceFile": "js-dcl.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1773935972899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1773935985380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-x = \n\\ No newline at end of file\n+let\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1773935972899,
+            "name": "Commit-0",
+            "content": "x = "
+        }
+    ]
+}
