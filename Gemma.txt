@@ -6,3 +6,14 @@ for auth - not selected yet
 railway - bor backend
 vercel - for frontend 
 html,css,js - for frontend 
+
+
+tree
+.env
+venv
+app.py
+a.html
+a.css
+a.js
+readme.md
+.gitignore
