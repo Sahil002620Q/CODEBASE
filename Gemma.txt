@@ -10,6 +10,7 @@ ngrok - for testing
 git/GitHub - for version control 
 
 make server using llm
+in the app there is setting button in which we can enable and disable features on hone screen like dark light mode , three chat mode like url uncensored and coding assistant or study one
 
 app specific features 
 have url detection for spam and phishing 
