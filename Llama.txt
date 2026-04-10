@@ -1,3 +1,5 @@
 future ideas 
 build own ai voice assistance using offline 
 llm
+
+what i learnt from first hackathon 
