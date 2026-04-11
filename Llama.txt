@@ -9,3 +9,6 @@ ppt decides everything
 team balance matters
 next publish offline ai on app store
 user can download llm from there directly 
+
+
+project idea , make an offline ai extention which will recognize sceen and give live outpul like android by holding lower menu line
