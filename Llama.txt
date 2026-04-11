@@ -8,3 +8,4 @@ make working prompt and test it before hackathon
 ppt decides everything 
 team balance matters
 next publish offline ai on app store
+user can download llm from there directly 
