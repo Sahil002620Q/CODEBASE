@@ -1,0 +1,3 @@
+1.  create prepbuilt prompt form old project at hom and try it 2-3 times 
+set-up deployment and run it 
+work on branch not on commit
