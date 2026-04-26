@@ -10,3 +10,5 @@ project 2
 personalized ai 
 have a configs which make ai personalized user will fill input and choos from field and ai will behave 
 and match full vibe like user
+
+try to know about agi and create your own agi bu sing two combined model 
