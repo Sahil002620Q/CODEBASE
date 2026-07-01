@@ -98,16 +98,16 @@
 
 
 
-x,y,z = 10,20,30 #if int then will be added , if str then int will be treated as string
-print(x+y+z)
+# x,y,z = 10,20,30 #if int then will be added , if str then int will be treated as string
+# print(x+y+z)
 
-x,y,z = 'python ','is ','awesome '    # need to give space before closing inverted comma
-print(x+y+z)
-#Notice the space character after "Python " and "is ", without them the result would be "Pythonisawesome".
-# you can add num by num or word by word but you can not add word and num it will throw an error
+# x,y,z = 'python ','is ','awesome '    # need to give space before closing inverted comma
+# print(x+y+z)
+# #Notice the space character after "Python " and "is ", without them the result would be "Pythonisawesome".
+# # you can add num by num or word by word but you can not add word and num it will throw an error
 
-x,y = 'number',2
-print(x,y)
+# x,y = 'number',2
+# print(x,y)
 
 
 # x = "yup"
@@ -117,13 +117,13 @@ print(x,y)
 
 
 
-# #If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
-# x = 4
+#If you create a variable with the same name inside a function, this variable will be local, and can only be used inside the function. The global variable with the same name will remain as it was, global and with the original value.
+# x = '4'
 # def myfunc():
-#     x = 3
+#     x = '3'
 #     print("three" + x)
-#     myfunc()
-#     print("four" + x)
+# myfunc()
+# print("four" + x)
 
 
 # x = 'f '
@@ -150,31 +150,32 @@ print(x,y)
 # def myfunc():
 #     global x
 #     x = 'i know'
+#     print(x)
 # myfunc()
 # print(x)
 
 
-# """
-# Text Type:   	str
-# Numeric Types:	int, float, complex
-# Sequence Types:	list, tuple, range
-# Mapping Type:	dict
-# Set Types:	    set, frozenset
-# Boolean Type:	bool
-# Binary Types:	bytes, bytearray, memoryview
-# None Type:   	NoneType
-# """
+"""
+Text Type:   	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	    set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:   	NoneType
+"""
 
 # print("------------------")
 
-# x = 1 
-# print(x)
-# print(type(x))
+x = 1 
+print(x)
+print(type(x))
 
 
-# x = 1.1
-# print(x)
-# print(type(x))
+x = 1.1
+print(x)
+print(type(x))
 
 
 # x = 1j
