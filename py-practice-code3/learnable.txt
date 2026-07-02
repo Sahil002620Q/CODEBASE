@@ -1,0 +1,11 @@
+| Escape | Meaning         |
+| ------ | --------------- |
+| `\n`   | New line        |
+| `\t`   | Tab             |
+| `\r`   | Carriage return |
+| `\b`   | Backspace       |
+| `\\`   | Print `\`       |
+| `\"`   | Print `"`       |
+| `\'`   | Print `'`       |
+
+

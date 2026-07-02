@@ -1,0 +1,17 @@
+Internet
+      │
+      ▼
+Wi-Fi Router
+      │
+ ┌────┴─────────────┐
+ │                  │
+Home AI Server      Phone/Laptop
+ │
+ ├── LLM
+ ├── OpenCV
+ ├── Nextcloud
+ ├── FTP/SFTP
+ ├── Website/API
+ ├── Database
+ ├── Dashboard
+ └── Camera Processing
