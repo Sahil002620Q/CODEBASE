@@ -1,13 +1,18 @@
-
+import json
+import lib
 name = {}
 x = input("enter user name : ")
 y = input("enter pass : ")
 name[x] = y
 
-with open("name.txt","a") as file: 
-    for n in name: 
-        file.write(str(name) + "\n")
 
-print(name)
+
+with open("name.json","w") as file: # "a" will make new dict ie {}  + {} not { k:v +k:v}
+    for n in name: 
+        json.dump(name,file,)
+        # file.write(str(name) + "\n")
+
+
+lib.lineanime(name)
 
 
